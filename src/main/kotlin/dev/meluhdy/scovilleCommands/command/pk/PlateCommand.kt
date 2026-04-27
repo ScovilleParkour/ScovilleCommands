@@ -19,7 +19,10 @@ object PlateCommand : MelodiaCommand("plate") {
 
     override val children: List<MelodiaCommand> = listOf()
     override val arguments: List<MelodiaArgument<*>> = listOf(
-        MelodiaArgument("course", StringArgumentType.greedyString(), this::addPlate)
+        MelodiaArgument("course", StringArgumentType.greedyString(), this::addPlate) { ctx, builder ->
+            CourseManager.getAll().forEach { course -> builder.suggest(course.name) }
+            return@MelodiaArgument builder.buildFuture()
+        }
     )
 
     private fun getBlock(player: Player): Block? {
@@ -33,7 +36,7 @@ object PlateCommand : MelodiaCommand("plate") {
 
     @UserOnly
     override fun noArgs(context: CommandContext<CommandSourceStack>): Int {
-        val plateBlock = this.getBlock(context.source.sender as Player) ?: return Command.SINGLE_SUCCESS
+        val plateBlock = this.getBlock(context.source.sender as Player) ?: return 0
         PlateManager.delete { plate -> plate.location == plateBlock.location }
         return Command.SINGLE_SUCCESS
     }

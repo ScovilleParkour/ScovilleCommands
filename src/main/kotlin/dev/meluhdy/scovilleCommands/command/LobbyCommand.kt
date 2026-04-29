@@ -1,7 +1,6 @@
-package dev.meluhdy.scoville.command
+package dev.meluhdy.scovilleCommands.command
 
 import com.mojang.brigadier.Command
-import com.mojang.brigadier.builder.RequiredArgumentBuilder
 import com.mojang.brigadier.context.CommandContext
 import dev.meluhdy.melodia.annotation.UserOnly
 import dev.meluhdy.melodia.command.MelodiaArgument

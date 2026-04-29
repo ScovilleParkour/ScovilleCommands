@@ -1,12 +1,10 @@
-package dev.meluhdy.scoville.command
+package dev.meluhdy.scovilleCommands.command
 
-import com.mojang.brigadier.Command
-import com.mojang.brigadier.builder.RequiredArgumentBuilder
 import com.mojang.brigadier.context.CommandContext
 import dev.meluhdy.melodia.command.MelodiaArgument
 import dev.meluhdy.melodia.command.MelodiaCommand
-import dev.meluhdy.scoville.command.pk.MenuCommand
-import dev.meluhdy.scoville.command.pk.PlateCommand
+import dev.meluhdy.scovilleCommands.command.pk.MenuCommand
+import dev.meluhdy.scovilleCommands.command.pk.PlateCommand
 import dev.meluhdy.scovilleCommands.command.pk.CreateCommand
 import io.papermc.paper.command.brigadier.CommandSourceStack
 import net.kyori.adventure.text.Component

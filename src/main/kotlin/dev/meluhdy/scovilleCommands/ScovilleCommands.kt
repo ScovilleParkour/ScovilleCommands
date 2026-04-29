@@ -6,8 +6,9 @@ import dev.meluhdy.melodia.manager.MelodiaSavingManager
 import dev.meluhdy.melodia.utils.ConsoleLogger
 import dev.meluhdy.melodia.utils.LoggingUtils
 import dev.meluhdy.melodia.utils.TranslationFolder
-import dev.meluhdy.scoville.command.LobbyCommand
-import dev.meluhdy.scoville.command.PKCommand
+import dev.meluhdy.scovilleCommands.command.LobbyCommand
+import dev.meluhdy.scovilleCommands.command.PKCommand
+import dev.meluhdy.scovilleCommands.command.JoinCommand
 import org.bukkit.event.Listener
 import java.util.Locale
 
@@ -24,6 +25,7 @@ class ScovilleCommands : MelodiaPlugin() {
     override val melodiaCommands: Array<MelodiaCommand> = arrayOf(
         PKCommand,
         LobbyCommand,
+        JoinCommand
     )
     override val resourceFiles: Array<String> = arrayOf(
         "lang/en.properties",

@@ -1,4 +1,4 @@
-package dev.meluhdy.scoville.command.pk
+package dev.meluhdy.scovilleCommands.command.pk
 
 import com.mojang.brigadier.Command
 import com.mojang.brigadier.arguments.StringArgumentType
@@ -9,6 +9,7 @@ import dev.meluhdy.melodia.command.MelodiaCommand
 import dev.meluhdy.scoville.core.course.CourseManager
 import dev.meluhdy.scoville.core.plate.Plate
 import dev.meluhdy.scoville.core.plate.PlateManager
+import dev.meluhdy.scovilleCommands.CommandUtil
 import io.papermc.paper.command.brigadier.CommandSourceStack
 import org.bukkit.Tag
 import org.bukkit.block.Block
@@ -44,12 +45,7 @@ object PlateCommand : MelodiaCommand("plate") {
     @UserOnly
     fun addPlate(context: CommandContext<CommandSourceStack>): Int {
         val plateBlock = this.getBlock(context.source.sender as Player) ?: return 0
-        val courseName = context.getArgument("course", String::class.java)
-        val course = CourseManager.get(courseName)
-        if (course == null) {
-            context.source.sender.sendMessage("Invalid course: $courseName")
-            return 0
-        }
+        val course = CommandUtil.getCourse(context) ?: return 0
         val plate = Plate(UUID.randomUUID())
         plate.location = plateBlock.location
         plate.setCourse(course)

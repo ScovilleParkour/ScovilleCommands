@@ -24,6 +24,7 @@ dependencies {
     multiModule.tryMultiModule(":Melodia", "dev.meluhdy:melodia:1.0-SNAPSHOT")
     multiModule.tryMultiModule(":ScovilleCore", "dev.meluhdy:scoville-core:1.0-SNAPSHOT")
     multiModule.tryMultiModule(":ScovilleUI", "dev.meluhdy:scoville-ui:1.0-SNAPSHOT")
+    compileOnly("net.luckperms:api:5.4")
 }
 
 val targetJavaVersion = 25

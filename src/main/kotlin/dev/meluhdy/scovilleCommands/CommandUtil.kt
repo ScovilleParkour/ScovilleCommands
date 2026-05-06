@@ -4,6 +4,8 @@ import com.mojang.brigadier.context.CommandContext
 import dev.meluhdy.scoville.core.course.AbstractCourse
 import dev.meluhdy.scoville.core.course.CourseManager
 import io.papermc.paper.command.brigadier.CommandSourceStack
+import org.bukkit.entity.Player
+import java.util.Locale
 
 object CommandUtil {
 
@@ -14,6 +16,14 @@ object CommandUtil {
             context.source.sender.sendMessage("Invalid course: $courseName")
         }
         return course
+    }
+
+    fun getLocale(context: CommandContext<CommandSourceStack>): Locale {
+        val sender = context.source.sender
+        if (sender is Player) {
+            return sender.locale()
+        }
+        return Locale.of("en")
     }
 
 }

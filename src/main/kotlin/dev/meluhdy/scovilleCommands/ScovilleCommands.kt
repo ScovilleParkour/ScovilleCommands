@@ -10,6 +10,7 @@ import dev.meluhdy.scovilleCommands.command.HelpCommand
 import dev.meluhdy.scovilleCommands.command.LobbyCommand
 import dev.meluhdy.scovilleCommands.command.PKCommand
 import dev.meluhdy.scovilleCommands.command.JoinCommand
+import dev.meluhdy.scovilleCommands.command.PlayingCommand
 import dev.meluhdy.scovilleCommands.command.RulesCommand
 import org.bukkit.event.Listener
 import java.util.Locale
@@ -29,7 +30,8 @@ class ScovilleCommands : MelodiaPlugin() {
         LobbyCommand,
         JoinCommand,
         RulesCommand,
-        HelpCommand
+        HelpCommand,
+        PlayingCommand
     )
     override val resourceFiles: Array<String> = arrayOf(
         "lang/en.properties",

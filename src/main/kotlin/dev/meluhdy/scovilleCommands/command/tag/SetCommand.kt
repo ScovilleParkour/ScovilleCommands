@@ -6,8 +6,8 @@ import com.mojang.brigadier.context.CommandContext
 import dev.meluhdy.melodia.command.MelodiaArgument
 import dev.meluhdy.melodia.command.MelodiaCommand
 import dev.meluhdy.melodia.utils.TextUtils
-import dev.meluhdy.scovilleChat.core.tag.ChatTag
-import dev.meluhdy.scovilleChat.core.tag.TagManager
+import dev.meluhdy.scovilleCosmetics.core.tag.ChatTag
+import dev.meluhdy.scovilleCosmetics.core.tag.TagManager
 import dev.meluhdy.scovilleCommands.CommandUtil
 import dev.meluhdy.scovilleCommands.ScovilleCommands
 import io.papermc.paper.command.brigadier.CommandSourceStack

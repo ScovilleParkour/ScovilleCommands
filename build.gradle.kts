@@ -24,7 +24,7 @@ dependencies {
     multiModule.tryMultiModule(":Melodia", "dev.meluhdy:melodia:1.0-SNAPSHOT")
     multiModule.tryMultiModule(":ScovilleCore", "dev.meluhdy:scoville-core:1.0-SNAPSHOT")
     multiModule.tryMultiModule(":ScovilleUI", "dev.meluhdy:scoville-ui:1.0-SNAPSHOT")
-    multiModule.tryMultiModule(":ScovilleChat", "dev.meluhdy:scoville-chat:1.0-SHAPSHOT")
+    multiModule.tryMultiModule(":ScovilleCosmetics", "dev.meluhdy:scoville-cosmetics:1.0-SHAPSHOT")
     compileOnly("net.luckperms:api:5.4")
 }
 

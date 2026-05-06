@@ -11,6 +11,7 @@ import dev.meluhdy.scovilleChat.core.tag.TagManager
 import dev.meluhdy.scovilleCommands.CommandUtil
 import dev.meluhdy.scovilleCommands.ScovilleCommands
 import io.papermc.paper.command.brigadier.CommandSourceStack
+import java.util.UUID
 
 object SetCommand : MelodiaCommand("set") {
 
@@ -27,7 +28,8 @@ object SetCommand : MelodiaCommand("set") {
         val id = context.getArgument("id", String::class.java) ?: return noArgs(context)
         val tag = context.getArgument("tag", String::class.java) ?: return noArgs(context)
 
-        TagManager.add(ChatTag(id, tag, type))
+        val inst = TagManager.get { it.id == id }
+        TagManager.add(ChatTag(id, tag, type, inst?.uuid ?: UUID.randomUUID()))
         return Command.SINGLE_SUCCESS
     }
 

@@ -6,7 +6,7 @@ import dev.meluhdy.melodia.command.MelodiaArgument
 import dev.meluhdy.melodia.command.MelodiaCommand
 import dev.meluhdy.melodia.utils.TextUtils
 import dev.meluhdy.melodia.utils.fromLegacyMessage
-import dev.meluhdy.melodia.utils.uuid.UUIDManager
+import dev.meluhdy.melodia.utils.manager.UUIDManager
 import dev.meluhdy.scoville.misc.track.StaffTrack
 import dev.meluhdy.scovilleCommands.ScovilleCommands
 import io.papermc.paper.command.brigadier.CommandSourceStack

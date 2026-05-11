@@ -7,6 +7,7 @@ import dev.meluhdy.melodia.utils.ConsoleLogger
 import dev.meluhdy.melodia.utils.LoggingUtils
 import dev.meluhdy.melodia.utils.TranslationFolder
 import dev.meluhdy.scovilleCommands.command.HelpCommand
+import dev.meluhdy.scovilleCommands.command.HotbarCommand
 import dev.meluhdy.scovilleCommands.command.LobbyCommand
 import dev.meluhdy.scovilleCommands.command.PKCommand
 import dev.meluhdy.scovilleCommands.command.JoinCommand
@@ -33,7 +34,8 @@ class ScovilleCommands : MelodiaPlugin() {
         RulesCommand,
         HelpCommand,
         PlayingCommand,
-        TagCommand
+        TagCommand,
+        HotbarCommand
     )
     override val resourceFiles: Array<String> = arrayOf(
         "lang/en.properties",

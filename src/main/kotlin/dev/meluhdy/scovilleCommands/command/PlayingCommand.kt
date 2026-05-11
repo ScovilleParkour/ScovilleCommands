@@ -6,15 +6,13 @@ import com.mojang.brigadier.context.CommandContext
 import dev.meluhdy.melodia.command.MelodiaArgument
 import dev.meluhdy.melodia.command.MelodiaCommand
 import dev.meluhdy.melodia.utils.TextUtils
-import dev.meluhdy.melodia.utils.uuid.UUIDManager
+import dev.meluhdy.melodia.utils.manager.UUIDManager
 import dev.meluhdy.scoville.core.course.CourseManager
 import dev.meluhdy.scoville.core.parkourer.ParkourerManager
 import dev.meluhdy.scovilleCommands.CommandUtil
 import dev.meluhdy.scovilleCommands.ScovilleCommands
 import io.papermc.paper.command.brigadier.CommandSourceStack
 import org.bukkit.Bukkit
-import org.bukkit.entity.Player
-import java.util.Locale
 import java.util.UUID
 
 object PlayingCommand : MelodiaCommand("playing") {
